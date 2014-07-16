@@ -6,7 +6,8 @@ public class TestEntity {
 
 	private Long id;
 	private UUID guid;
-	
+	private String label;
+
 	public Long getId() {
 		return id;
 	}
@@ -22,8 +23,13 @@ public class TestEntity {
 	public void setGuid(UUID guid) {
 		this.guid = guid;
 	}
-	
-	
-	
+
+	public String getLabel() {
+		return label;
+	}
+
+	public void setLabel(String label) {
+		this.label = label;
+	}
 
 }

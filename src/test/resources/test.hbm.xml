@@ -19,6 +19,7 @@
 			<property name="guid" update="false" type="uuid.jdk5"
 				length="128" column="guid" not-null="true" unique="true" />
 		</natural-id>
+		<property name="label" type="string"/>
 	</class>
 
 </hibernate-mapping>

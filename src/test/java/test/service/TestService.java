@@ -31,7 +31,9 @@ public class TestService extends HibernateDaoSupport {
 
 						TestEntity testEntity = new TestEntity();
 						testEntity.setGuid(UUID.randomUUID());
+						testEntity.setLabel("foo");
 						session.save(testEntity);
+						testEntity.setLabel("bar");
 						session.save(testEntity);
 
 						session.flush();
