@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="test.domain" default-lazy="true"
+	default-cascade="none" default-access="field">
+
+	<typedef name="uuid.jdk5" class="test.domain.UUIDType" />
+
+	<class name="TestEntity" table="TEST_ENTITY">
+		<id name="id" column="ID">
+			<generator class="sequence">
+				<param name="sequence">hibernate_sequence</param>
+			</generator>
+		</id>
+
+		<natural-id mutable="false">
+			<property name="guid" update="false" type="uuid.jdk5"
+				length="128" column="guid" not-null="true" unique="true" />
+		</natural-id>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 
+	 <logger name="org.springframework" level="ERROR" />
+	<logger name="com.mchange" level="ERROR" />
+	<logger name="org.mule" level="ERROR" />
+
+	<logger name="com.otr.sufd.integration.Transformer" level="ERROR" />
+	<logger name="com.otr.sufd.services.lock" level="INFO" />
+	<logger name="com.otr.sufd.integration" level="INFO" />
+	 -->
+	<logger name="org.hibernate.SQL" level="TRACE" />
+
+	<root level="INFO">
+		<appender-ref ref="stdout" />
+	</root>
+</configuration>
